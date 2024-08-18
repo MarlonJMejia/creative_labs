@@ -18,9 +18,7 @@ There are trade-offs to doing this, though. For instance, if you assign system m
 
 Just remember that every action you make to configure a container _can_ have negative effects somewhere else.
 
-Rather than run through all of the options for configuration, use the tab auto-complete to see the options available:
-
-Detailed Documentation for configuration optinos:
+Detailed Documentation for configuration options:
 
 https://documentation.ubuntu.com/lxd/en/latest/reference/instance_options/
 

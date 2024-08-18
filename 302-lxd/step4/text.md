@@ -1,4 +1,4 @@
-# Chapter 8: container snapshots
+# Container snapshots
 
 Throughout this chapter you will need to run commands as your unprivileged user ("lxdadmin" if you've been following along from the beginning of this book).
 
@@ -42,6 +42,9 @@ Create an empty file with the _touch_ command, exit the container and list files
 ```
 touch this_file.txt
 exit
+```{{exec}}
+
+```
 lxc exec debian12-test ls
 ```{{exec}}
 

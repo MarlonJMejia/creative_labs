@@ -1,3 +1,2 @@
 #!/bin/bash
-
-/bin/true
+lxc info debian12-test | grep debian12-test-1
