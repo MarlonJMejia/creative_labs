@@ -28,10 +28,10 @@
           "verify": "step4/verify.sh"
         }
       ],
-    "assets": {
-        "host01": [
-          {"file": "config.yaml", "target": "/root/config.yaml"}   
-        ]
+	    "assets": {
+	       "host01": [
+		        {"file": "config.yaml", "target": "/root"}   
+         ]
         },
       "finish": {
         "text": "finish.md"

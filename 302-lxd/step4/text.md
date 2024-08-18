@@ -14,13 +14,13 @@ Start by getting a snapshot of the debian12-test container by using this command
 
 ```
 lxc snapshot debian12-test debian12-test-1
-```
+```{{exec}}
 
 Here, you are calling the snapshot "debian12-test-1", but you can call it anything. To ensure that you have the snapshot, do an `lxc info` of the container:
 
 ```
 lxc info debian12-test
-```
+```{{exec}}
 
 You have looked at an info screen already. If you scroll to the bottom, you now see:
 
@@ -34,44 +34,48 @@ Success! Our snapshot is in place.
 Get into the debian12-test container:
 
 ```
-lxc exec debian12-test bash
-```
+lxc shell debian12-test
+```{{exec}}
 
-Create an empty file with the _touch_ command:
+Create an empty file with the _touch_ command, exit the container and list files in root.
 
 ```
 touch this_file.txt
-```
-
-Exit the container.
+exit
+lxc exec debian12-test ls
+```{{exec}}
 
 Before restoring the container how it was prior to creating the file, the safest way to restore a container, particularly if there have been many changes, is to stop it first:
 
 ```
 lxc stop debian12-test
-```
+```{{exec}}
 
 Restore it:
 
 ```
 lxc restore debian12-test debian12-test-1
-```
+```{{exec}}
 
 Start the container again:
 
 ```
 lxc start debian12-test
-```
+```{{exec}}
 
-If you get back into the container again and look, our "this_file.txt" that you created is now gone.
+If you get list the files once again, you will see that the file we created with _touch_ no longer exists.
+
+```
+lxc exec debian12-test ls
+```{{exec}}
 
 When you do not need a snapshot anymore you can delete it:
 
 ```
 lxc delete debian12-test/debian12-test-1
-```
+```{{exec}}
 
-Warning
+**Warning**
 
 You should always delete snapshots with the container running. Why? Well the _lxc delete_ command also works to delete the entire container. If we had accidentally hit enter after "debian12-test" in the command above, AND, if the container was stopped, the container would be deleted. No warning is given, it simply does what you ask.
 
