@@ -1,4 +1,3 @@
-
 # Install and Configuration
 
 Reference: https://docs.rockylinux.org/books/lxd_server/
@@ -11,7 +10,7 @@ Your server environment is all set up. You are ready to initialize LXD.
 This is an automated script that asks a series of questions to get your LXD instance up and running.
 
 
-If you feel like the need to automate this setup you can run `cat /root/config.yml | lxd init --preseed` to initiate LXD.
+If you feel like the need to automate this setup you can run `cat /root/config.yaml | lxd init --preseed` to initiate LXD.
 
 ```
 lxd init

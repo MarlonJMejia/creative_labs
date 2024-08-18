@@ -28,16 +28,16 @@
           "verify": "step4/verify.sh"
         }
       ],
-	    "assets": {
-	       "host01": [
-		        {"file": "config.yaml", "target": "/root/config.yaml"}   
-         ]
+    "assets": {
+        "host01": [
+          {"file": "config.yaml", "target": "/root/config.yaml"}   
+        ]
         },
       "finish": {
         "text": "finish.md"
       }
     },
     "backend": {
-      "imageid": "kubernetes-kubeadm-2nodes"
+      "imageid": "ubuntu-4GB"
     }
 }
