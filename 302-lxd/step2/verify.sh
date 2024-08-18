@@ -4,3 +4,5 @@ if [ $(lxc list | grep -c test) -eq 3 ]; then
 else
     /bin/false
 fi
+
+/bin/true
