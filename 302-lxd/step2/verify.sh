@@ -1,8 +1,6 @@
 #!/bin/bash
-if [ $(lxc list | grep -c test) -eq 3 ]; then
-    /bin/true
+if [ $(lxc list | grep -c test) -eq 3 ]; then 
+    exit 0
 else
-    /bin/false
+    exit 1
 fi
-
-/bin/true
