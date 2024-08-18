@@ -1,6 +1,6 @@
 # Setting up and managing images
 
-## List available images
+## Creating and Listing images
 
 You probably can not wait to get started with a container. There are many container operating system possibilities. To get a feel for how many possibilities, enter this command:
 
@@ -55,6 +55,12 @@ Use the `move` command to change the container's name:
 lxc move rockylinux-mv-8 rockylinux-test-8
 ```{{exec}}
 
+Use the `start` command to start the container once again:
+
+```
+lxc start rockylinux-test-8
+```{{exec}}
+
 If you followed this instruction anyway, stop the container and move it back to the original name to continue to follow along.
 
 For the purposes of this guide, go ahead and install two more images for now:
@@ -69,15 +75,3 @@ Examine what you have by listing your images:
 ```
 lxc list
 ```{{exec}}
-
-which will return this:
-
-+-------------------+---------+-----------------------+------+-----------+-----------+
-|       NAME        |  STATE  |         IPV4          | IPV6 |   TYPE    | SNAPSHOTS |
-+-------------------+---------+-----------------------+------+-----------+-----------+
-| debian12-test     | RUNNING | 10.159.212.130 (eth0) |      | CONTAINER | 0         |
-+-------------------+---------+-----------------------+------+-----------+-----------+
-| rockylinux-test-8 | RUNNING | 10.159.212.153 (eth0) |      | CONTAINER | 0         |
-+-------------------+---------+-----------------------+------+-----------+-----------+
-| rockylinux-test-9 | RUNNING | 10.159.212.134 (eth0) |      | CONTAINER | 0         |
-+-------------------+---------+-----------------------+------+-----------+-----------+

@@ -1,5 +1,2 @@
 #!/bin/bash
-
-lxc list | grep debian12
-lxc list | grep rockylinux-test-8
-lxc list | grep rockylinux-test-9
+if [ $(lxc list | grep -c test) -eq 3 ]; then echo /bin/true; else /bin/false; fi

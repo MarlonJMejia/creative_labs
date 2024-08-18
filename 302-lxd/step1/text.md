@@ -1,7 +1,7 @@
 
 # Install and Configuration
 
-Source: https://docs.rockylinux.org/books/lxd_server/
+Reference: https://docs.rockylinux.org/books/lxd_server/
 
 ## LXD initialization
 
@@ -11,7 +11,7 @@ Your server environment is all set up. You are ready to initialize LXD.
 This is an automated script that asks a series of questions to get your LXD instance up and running.
 
 
-If you feel like you want to automate this setup there is a configuration file under `/root/config.yml` can than run `cat /root/config.yml | lxd init --preseed` to initiate LXD.
+If you feel like the need to automate this setup you can run `cat /root/config.yml | lxd init --preseed` to initiate LXD.
 
 ```
 lxd init
@@ -44,16 +44,11 @@ Name of the storage backend to use (btrfs, dir, lvm, zfs, ceph) [default=zfs]:
 You want to accept the default.
 
 ```
-Create a new ZFS pool? (yes/no) [default=yes]: no
+Create a new ZFS pool? (yes/no) [default=yes]: yes
 ```
 
-
-
-Here is where the resolution of the earlier question about creating a storage pool comes into play.
-
 ```
-Name of the existing ZFS pool or dataset: storage
-
+Would you like to use an existing empty block device (e.g. a disk or partition)? (yes/no) [default=no]:
 Would you like to connect to a MAAS server? (yes/no) [default=no]:
 ```
 

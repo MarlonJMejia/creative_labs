@@ -30,7 +30,7 @@
       ],
 	    "assets": {
 	       "host01": [
-		        {"file": ".tmux.conf", "target": "~/"}   
+		        {"file": "config.yaml", "target": "/root/config.yaml"}   
          ]
         },
       "finish": {
