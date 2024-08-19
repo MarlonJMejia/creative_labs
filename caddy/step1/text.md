@@ -45,8 +45,8 @@ Enable and open ports for `http` and `https`
 ufw enable
 ufw allow http
 ufw allow https
-```
-{{exec}}
+```{{exec}}
+
 </details>
 
 

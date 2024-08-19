@@ -21,31 +21,21 @@ python3 -m http.server 8080 &
 
 Let's edit our Caddyfile once again to apply changes.
 
-First we will comment the line `root * /usr/share/caddy/` by appending a `#`
+First we will comment the line `root * /usr/share/caddy/` by appending a `#`, we will also comment out the `file_server` line.
 
-We will now enable the reverse proxy by uncommenting the line `reverse_proxy localhost:8080` by removing `#`.
+Enable the reverse proxy by uncommenting the line `reverse_proxy localhost:8080` by removing `#`.
 
 
 Your caddy file should look a little bit like this:
 
 ```
-# The Caddyfile is an easy way to configure your Caddy web server.
-#
-# Unless the file starts with a global options block, the first
-# uncommented line is always the address of your site.
-#
-# To use your own domain name (with automatic HTTPS), first make
-# sure your domain's A/AAAA DNS records are properly pointed to
-# this machine's public IP, then replace ":80" below with your
-# domain name.
-
 web.in.internal {
   tls internal
   # Set this path to your site's directory.
   # root * /usr/share/caddy/
 
   # Enable the static file server.
-  file_server
+  # file_server
 
   # Another common task is to set up a reverse proxy:
   reverse_proxy localhost:8080
@@ -53,9 +43,6 @@ web.in.internal {
   # Or serve a PHP site through php-fpm:
   # php_fastcgi localhost:9000
 }
-
-# Refer to the Caddy docs for more information:
-# https://caddyserver.com/docs/caddyfile
 ```
 
 Reload your caddy configuration, as this does not need a restart of the service.
@@ -71,3 +58,19 @@ curl https://web.in.internal
 ```{{exec}}
 
 You'll also notice that the output from the background server (python) is also viewed on the foreground. `127.0.0.1 - - [19/Aug/2024 16:34:23] "GET / HTTP/1.1" 200 -` which indicates that it sucessfully received a request.
+
+Let's create a few other files for our webservers to query
+
+```
+for i in {1..5}; do echo "New page ${i}" > /root/webfiles/page${i}.html; done
+```{{exec}}
+
+Query the pages
+
+```
+curl https://web.in.internal/page{1..5}.html
+```{{exec}}
+
+In this example our application was but a mere http server, but the basics behind a reverse_proxy have been learnt.
+
+{{TRAFFIC_HOST1_80}}
