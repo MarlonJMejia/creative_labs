@@ -1,2 +1,2 @@
 #!/bin/bash
-true
+/usr/bin/true
