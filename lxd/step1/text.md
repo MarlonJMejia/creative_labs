@@ -1,6 +1,6 @@
 # Install and Configuration
 
-Reference: https://docs.rockylinux.org/books/lxd_server/
+Reference: https://docs.rockylinux.org/books/lxd_server/01-install/
 
 ## LXD initialization
 
@@ -8,6 +8,8 @@ Your server environment is all set up. You are ready to initialize LXD.
 
 
 This is an automated script that asks a series of questions to get your LXD instance up and running.
+
+Please wait a few seconds for a prompt.
 
 ```
 lxd init
@@ -23,26 +25,16 @@ If interested in clustering, do some additional research on that [here](https://
 
 ```
 Do you want to configure a new storage pool? (yes/no) [default=yes]:
-```
-
-```
 Name of the new storage pool [default=default]: storage
-```
-
-
-```
 Name of the storage backend to use (btrfs, dir, lvm, zfs, ceph) [default=zfs]:
-```
-
-You want to accept the default.
-
-```
 Create a new ZFS pool? (yes/no) [default=yes]: yes
-```
-
-```
 Would you like to use an existing empty block device (e.g. a disk or partition)? (yes/no) [default=no]:
 Size in GB of the new loop device (1GB minimum) [default=5GB]:
+```
+
+Remember to adjust storage settings on an actual production server to the needs of the application or infrastructure.
+
+```
 Would you like to connect to a MAAS server? (yes/no) [default=no]:
 ```
 
