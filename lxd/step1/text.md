@@ -89,8 +89,6 @@ Switch to user:
 su lxdadmin
 ```{{exec}}
 
-As with the other passwords, save this to a secure location.
-
 If you feel like the need to automate this setup you can run `cat /root/config.yaml | lxd init --preseed` to initiate LXD.
 
 You can create your own preseed file by choosing yes when promted in `lxd init`.
