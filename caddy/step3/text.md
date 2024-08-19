@@ -72,5 +72,3 @@ curl https://web.in.internal/page{1..5}.html
 ```{{exec}}
 
 In this example our application was but a mere http server, but the basics behind a reverse_proxy have been learnt.
-
-{{TRAFFIC_HOST1_80}}
