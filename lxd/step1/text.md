@@ -73,7 +73,7 @@ This trust password is how you will connect to the snapshot server or back from 
 
 ```
 Would you like stale cached images to be updated automatically? (yes/no) [default=yes]
-Would you like a YAML "lxd init" preseed to be printed? (yes/no) [default=no]:
+Would you like a YAML "lxd init" preseed to be printed? (yes/no) [default=no]: yes
 ```
 
 ## Setting up user privileges
@@ -99,3 +99,5 @@ su lxdadmin
 As with the other passwords, save this to a secure location.
 
 If you feel like the need to automate this setup you can run `cat /root/config.yaml | lxd init --preseed` to initiate LXD.
+
+You can create your own preseed file by choosing yes when promted in `lxd init`.
