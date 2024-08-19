@@ -41,6 +41,9 @@ Create an empty file with the _touch_ command, exit the container and list files
 
 ```
 touch this_file.txt
+```{{exec}}
+
+```
 exit
 ```{{exec}}
 

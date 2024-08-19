@@ -18,10 +18,6 @@ There are trade-offs to doing this, though. For instance, if you assign system m
 
 Just remember that every action you make to configure a container _can_ have negative effects somewhere else.
 
-Detailed Documentation for configuration options:
-
-https://documentation.ubuntu.com/lxd/en/latest/reference/instance_options/
-
 ```
 lxc config set debian12-test limits.memory 2GB
 ```{{exec}}
@@ -83,3 +79,7 @@ lxc config device override debian12-test root size=2GB
 As stated earlier, use configuration options sparingly, unless you have got a container that wants to use way more than its share of resources. LXD, for the most part, will manage the environment well on its own.
 
 Many more options exist that might be of interest to some people. Doing your own research will help you to find out if any of those are of value in your environment.
+
+Detailed Documentation for configuration options:
+
+https://documentation.ubuntu.com/lxd/en/latest/reference/instance_options/

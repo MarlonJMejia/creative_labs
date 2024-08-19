@@ -28,13 +28,10 @@ If interested in clustering, do some additional research on that [here](https://
 Do you want to configure a new storage pool? (yes/no) [default=yes]:
 ```
 
-This seems counter-intuitive. You have already created your ZFS pool, but it will become clear in a later question. Accept the default.
-
 ```
 Name of the new storage pool [default=default]: storage
 ```
 
-Leaving this "default" is an option, but for clarity, using the same name you gave our ZFS pool is better.
 
 ```
 Name of the storage backend to use (btrfs, dir, lvm, zfs, ceph) [default=zfs]:
@@ -87,13 +84,17 @@ Would you like a YAML "lxd init" preseed to be printed? (yes/no) [default=no]:
 Before you continue on, you need to create your "lxdadmin" user and ensure that it has the privileges it needs. You need the "lxdadmin" user to be able to `sudo` to root and you need it to be a member of the lxd group. To add the user and ensure it is a member of both groups do:
 
 ```
-useradd -G adm,lxd lxdadmin
+useradd -G admin,lxd -m -s /bin/bash lxdadmin
 ```{{exec}}
 
 Set the password:
 
 ```
 passwd lxdadmin
+```{{exec}}
+
+```
+su lxdadmin
 ```{{exec}}
 
 As with the other passwords, save this to a secure location.
