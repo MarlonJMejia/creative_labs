@@ -1,6 +1,6 @@
 {
-    "title": "Let's mess around with LXD Containers",
-    "description": "LXD is a modern, secure and powerful system container and virtual machine manager.",
+    "title": "Let's mess around with Caddy",
+    "description": "Caddy is simple to configure webserver and proxy, with automated certificate renewal.",
     "details": {
       "intro": {
         "text": "intro.md",
