@@ -1,2 +1,2 @@
 #!/bin/bash
-/usr/bin/true
+exit 0
