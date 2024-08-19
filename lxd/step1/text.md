@@ -42,6 +42,7 @@ Create a new ZFS pool? (yes/no) [default=yes]: yes
 
 ```
 Would you like to use an existing empty block device (e.g. a disk or partition)? (yes/no) [default=no]:
+Size in GB of the new loop device (1GB minimum) [default=5GB]:
 Would you like to connect to a MAAS server? (yes/no) [default=no]:
 ```
 
