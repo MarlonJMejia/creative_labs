@@ -1,0 +1,43 @@
+{
+    "title": "Let's mess around with LXD Containers",
+    "description": "LXD is a modern, secure and powerful system container and virtual machine manager.",
+    "details": {
+      "intro": {
+        "text": "intro.md",
+        "background": "setup.sh"
+      },
+      "steps": [
+        {
+          "title": "Creating your first container",
+          "text": "step1/text.md",
+          "verify": "step1/verify.sh"
+        },
+        {
+          "title": "Setting up and managing images",
+          "text": "step2/text.md",
+          "verify": "step2/verify.sh"
+        },
+        {
+          "title": "Container configuration options",
+          "text": "step3/text.md",
+          "verify": "step3/verify.sh"
+        },
+        {
+          "title": "Container snapshots",
+          "text": "step4/text.md",
+          "verify": "step4/verify.sh"
+        }
+      ],
+	    "assets": {
+	       "host01": [
+		        {"file": "Caddyfile", "target": "/root"}   
+         ]
+        },
+      "finish": {
+        "text": "finish.md"
+      }
+    },
+    "backend": {
+      "imageid": "ubuntu"
+    }
+}
