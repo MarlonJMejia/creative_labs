@@ -73,10 +73,4 @@ curl https://web.in.internal/page{1..5}.html
 
 In this example our application was but a mere http server, but the basics behind a reverse_proxy have been learnt.
 
-Kill your python3 webserver
-
-```
-pkill python3
-```{{exec}}
-
 {{TRAFFIC_HOST1_80}}
