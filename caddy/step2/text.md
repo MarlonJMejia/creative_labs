@@ -22,6 +22,8 @@ echo "New page!" > /usr/share/caddy/index.html
 
 With caddy you can create a local certificate with the `tls` directive by simply passing internal.
 
+>Please note that you might need to use a different parameter for TLS if you are trying to use an external domain. (ex; cloudflare, duckdns)
+
 Please edit your `/etc/caddy/Caddyfile` like the following:
 
 ```
