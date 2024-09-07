@@ -1,3 +1,3 @@
-# Welcome to ProLUG Linux
+# Welcome to the Caddy course
 
-In this ProLUG Lab you will learn how to use Caddy.
+This couse will aim to teach you the basic of caddy and some of it's extensability.

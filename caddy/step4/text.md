@@ -122,4 +122,4 @@ web2.in.internal {
 }
 ```
 
-Now we have sucessfully modify the headers for our domains, without having to repeat the same process across them.
+Now we have sucessfully modify the headers for our domains, without having to repeat the same process across multiple srvs.
