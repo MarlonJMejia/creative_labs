@@ -29,8 +29,12 @@ curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --d
 
 curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list
 
-sudo apt-get update; sudo apt-get install caddy -y
+sudo apt-get update
 ```{{exec}}
+
+```bash
+sudo apt-get install caddy -y
+```
 
 Verify caddy is running
 
