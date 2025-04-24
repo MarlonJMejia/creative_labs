@@ -1,2 +1,2 @@
 #!/bin/bash
-/usr/bin/true
+systemctl status caddy --no-pager

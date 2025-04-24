@@ -19,7 +19,7 @@ python3 -m http.server 8080 &
 ```{{exec}}
 
 
-Let's edit our Caddyfile once again to apply changes.
+Let's edit our Caddyfile `/etc/caddy/Caddyfile` once again to apply changes.
 
 First we will comment the line `root * /usr/share/caddy/` by appending a `#`, we will also comment out the `file_server` line.
 

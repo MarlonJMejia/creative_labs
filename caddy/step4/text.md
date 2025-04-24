@@ -80,7 +80,7 @@ What's going on?
 (default_headers) is the name of our snippet. `import /etc/caddy/snippets/headers`
 everytime we call default_headers in our Caddyfile we will source this exact same code to our config. Be aware that you still need to be mindful of the structure of the caddyfile.
 
-Let's make modifications to our caddyfile to reflect this.
+Let's make modifications to our Caddyfile `/etc/caddy/Caddyfile` to reflect this.
 
 ```
 import /etc/caddy/snippets/headers
