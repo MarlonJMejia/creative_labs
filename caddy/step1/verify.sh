@@ -5,7 +5,6 @@
 # NOTE: there seems to be a limit after which the Validator verify command is not valid, even
 # though exit code 0 and "done" is returned. This could be after X amount of commands, or too
 # long execution time, not sure why. Hence this file should be as short as possible.
-
 if systemctl status caddy --no-pager &> /dev/null; then
-	    echo "done"
+     	echo "done"
 fi
