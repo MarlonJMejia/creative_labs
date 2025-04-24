@@ -2,7 +2,7 @@
 
 Snippets are a way to programatically repeat something, let's say we want to create multiple webservers with the same configurations without repeating the same actions over and over.
 
-```
+```text
 web.in.internal {
     header {
         header_up Strict-Transport-Security "max-age=31536000;"
@@ -83,6 +83,7 @@ everytime we call default_headers in our Caddyfile we will source this exact sam
 Let's make modifications to our Caddyfile `/etc/caddy/Caddyfile` to reflect this.
 
 ```
+
 import /etc/caddy/snippets/headers
 
 web.in.internal {
@@ -90,17 +91,23 @@ web.in.internal {
   header {
     default_headers
   }
-  # Set this path to your site's directory.
-  # root * /usr/share/caddy/
 
-  # Enable the static file server.
-  # file_server
+# Set this path to your site's directory
 
-  # Another common task is to set up a reverse proxy:
+# root * /usr/share/caddy/
+
+# Enable the static file server
+
+# file_server
+
+# Another common task is to set up a reverse proxy
+
   reverse_proxy localhost:8080
 
-  # Or serve a PHP site through php-fpm:
-  # php_fastcgi localhost:9000
+# Or serve a PHP site through php-fpm
+
+# php_fastcgi localhost:9000
+
 }
 
 web2.in.internal {
@@ -108,18 +115,25 @@ web2.in.internal {
   header {
     default_headers
   }
-  # Set this path to your site's directory.
+
+# Set this path to your site's directory
+
   root * /usr/share/caddy/
 
-  # Enable the static file server.
+# Enable the static file server
+
   file_server
 
-  # Another common task is to set up a reverse proxy:
-  # reverse_proxy localhost:8080
+# Another common task is to set up a reverse proxy
 
-  # Or serve a PHP site through php-fpm:
-  # php_fastcgi localhost:9000
+# reverse_proxy localhost:8080
+
+# Or serve a PHP site through php-fpm
+
+# php_fastcgi localhost:9000
+
 }
+
 ```
 
 Now we have sucessfully modify the headers for our domains, without having to repeat the same process across multiple srvs.
