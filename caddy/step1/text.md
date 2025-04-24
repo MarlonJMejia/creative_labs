@@ -34,7 +34,7 @@ sudo apt-get update
 
 ```bash
 sudo apt-get install caddy -y
-```
+```{{exec}}
 
 Verify caddy is running
 
