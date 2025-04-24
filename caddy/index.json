@@ -10,7 +10,7 @@
         {
           "title": "Installing Caddy",
           "text": "step1/text.md",
-          "verify": "step1/verify1.sh"
+          "verify": "step1/verify.sh"
         },
         {
           "title": "Simple Webserver",
