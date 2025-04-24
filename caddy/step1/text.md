@@ -23,13 +23,13 @@ Please also verify that caddy is `running` and active, and that firewall rules a
 Install Caddy
 
 ```bash
-sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https curl 
+sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https curl
 
 curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
 
 curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list
 
-sudo apt-get update && sudo apt-get install caddy -y
+sudo apt-get update; sudo apt-get install caddy -y
 ```{{exec}}
 
 Verify caddy is running
